@@ -8,5 +8,16 @@ Run the AI Lab Code. After a while (full dataset needs 8h ! ),  the message "Inc
 example, 10 files) into the data folder of Hashtag2Vec. Make sure Hashtag2Vec uses the right folder. Run it. It creates 4 files (W_h_5_5_0.txt for example), 
 which need to be copied into the LaborAI/Test folder. Now press enter. 2 diagrams are created with 4 subplots each and silhoutte and ami are calculated.
 
-Possible Improvements:
-Make it automated, figure out why it is performing rather poorly. Coding style improvements.
+# Possible Improvements
+Performance:
+- Try using sentences with min. number of words/hashtags
+- Check formulas of the Hashtag2Vec paper and how they are implemented
+
+Runtime:
+- Currently each sentence has 64 embeddings, make max_length of sentence and use it for bert (also for hashtags), has major impact on runtime
+- Use Sparse matrices, currently dictionaries (not that impactful i feel like)
+
+General:
+- Make it run automated
+- Coding style improvements
+
